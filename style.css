@@ -33,6 +33,7 @@ body{
 }
 #secScreen{
     height:40px;
+    padding: 2px;
 }
 
 #priScreen{
