@@ -99,7 +99,7 @@ function evaluate(){
         return
     }
     secondOperand = currentOperationScreen.textContent;
-    currentOperationScreen.textContent = operate(firstOperand, secondOperand, currentOperation)
+    currentOperationScreen.textContent = round(operate(firstOperand, secondOperand, currentOperation))
     previousOperationScreen.innerHTML = `${firstOperand} ${currentOperation} ${secondOperand} = `
     currentOperation = null;
 }
@@ -125,4 +125,8 @@ function appendPoint(){
     if(currentOperationScreen.textContent.includes('.'))
         return
         currentOperationScreen.textContent += '.'
+}
+
+function round(number){
+    return Math.round(number*100000)/100000;
 }
